@@ -17,7 +17,7 @@ public class Main {
         Object[] eventArr = eventQueue.getArray();
         Arrays.sort(eventArr);
         for(Object e: eventArr) {
-            System.out.println("Event time: "+((Event) e).getEventTime()+"\n"+"Event type: " + ((Event)e).getEventType());
+            System.out.println("Event time: "+((Event)e).getEventTime()+"\n"+"Event type: " + ((Event)e).getEventType());
         }
     }
 }
