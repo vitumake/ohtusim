@@ -19,6 +19,23 @@ public class ArrivalProcess {
         time+=uniVal.sample();
         return list.addEvent(new Event(time, type));
     }
+
+    public static void main(String[] args) {
+        EventList events = new EventList();
+        Clock clck = Clock.getInstance();
+        ArrivalProcess arrival = ArrivalProcess.getInstance();
+
+        System.out.println(clck.getTime());
+        for(int i=0; i<10; i++) {
+            clck.setTime(arrival.genEvents(events).getTime());
+        }
+
+        for(int i=0;i<10; i++) {
+            Event event = events.getNext();
+            System.out.println("Type: "+ event.getEventType()+" Event time: "+event.getTime());
+        }
+        System.out.println(clck.getTime());
+    }
 }
 
 

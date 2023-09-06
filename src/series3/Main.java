@@ -18,7 +18,7 @@ public class Main {
         }
 
         // Run sim
-        for(int i=0; i<events.getLength(); i++) {
+        for(int i=0; i<10; i++) {
             event = events.getNext();
             customer = new Customer();
             customer.setStartTime(event.getTime()*1000); // All logic handeled in milliseconds
