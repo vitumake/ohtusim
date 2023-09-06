@@ -25,4 +25,11 @@ public class Clock {
     public int getTime() {
         return time;
     }
+
+    public static void main(String[] args) {
+        Clock clck = Clock.getInstance();
+        System.out.println(clck.getTime());
+        System.out.println(clck.setTime(10));
+        System.out.println(clck.incTime(5));
+    }
 }
